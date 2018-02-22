@@ -5,7 +5,7 @@
 это как минимум один фаил где описывается ws-сервис принимающий 3 параметра
 @param_1 - строка @param_2 - целое @param_3 - дата
 Сервис делает условно серьезные манипуляции к примеру
-"SELECT c.id AS ID_contract, c.date1 AS From_Date, c.title AS Contract
+```"SELECT c.id AS ID_contract, c.date1 AS From_Date, c.title AS Contract
 	FROM contract AS c 
 	LEFT JOIN contract_parameter_type_1 AS fam ON c.id = fam.cid AND fam.pid = 1 
   LEFT JOIN contract_parameter_type_1 AS inn ON c.id = inn.cid AND inn.pid = 14
@@ -13,6 +13,7 @@
 	WHERE c.fc = 0 
 	AND fam.cid IS NOT NULL 
 	AND c.date2 IS NULL"
+```
 И передает в ответ на запрос от клиента полученные результаты.
 @ParamRes_ID_Contract, @ParamRes_From_Data @ParamRes_Contract @ParamRes_Fam @ParamRes_inn @ParamRes_adress
 
