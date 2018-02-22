@@ -1,4 +1,4 @@
-package api.<wsServer>.bgbilling.service.impl;
+package api.<ru.test>.bgbilling.service.impl;
 
 /*
 ** Первый автор Phricker 
@@ -12,8 +12,8 @@ package api.<wsServer>.bgbilling.service.impl;
 **# [context/] = обычно bgbilling/ (если не меняли в конфиге)
 **# [module] = для класса выше ru.company.bgbilling.service
 **# [service] = для класса выше ContractService
-**# http://192.168.10.68:8080/bgbilling/api/uz.vtvs.bgbilling.service/ContractList
-**# http://192.168.10.68:8080/bgbilling/api/uz.vtvs.bgbilling.service/ContractList?wsdl
+**# http://192.168.10.68:8080/bgbilling/api/<ru.test>.bgbilling.service/ContractList
+**# http://192.168.10.68:8080/bgbilling/api/<ru.test>.bgbilling.service/ContractList?wsdl
 */
 import ru.bitel.bgbilling.kernel.container.service.server.AbstractService;
 import ru.bitel.common.Utils;
