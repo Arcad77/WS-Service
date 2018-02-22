@@ -1,11 +1,17 @@
-package api.<wsserver>.bgbilling.service.impl;
+package api.<ru.test>.bgbilling.service.impl;
+
+/*
+**
+** Зачем именно этот фаил и почему не реализован по другому знает только Phricker
+**
+*/
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
  
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"getAgentListResult"}, namespace = "http://bgb-1c.vtvs.uz/")
-@XmlRootElement(name = "GetAgentListResponse", namespace = "http://bgb-1c.vtvs.uz/")
+@XmlType(name = "", propOrder = {"getAgentListResult"}, namespace = "http://<wsserver.test.ru>/")
+@XmlRootElement(name = "GetAgentListResponse", namespace = "http://<wsserver.test.ru>/")
 public class GetAgentListResponse {
  
     @XmlElement(name = "GetAgentListResult")
