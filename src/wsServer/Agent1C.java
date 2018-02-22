@@ -12,10 +12,11 @@ package api.<ru.test>.bgbilling.service.impl;
 import javax.xml.bind.annotation.*;
  
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {	"ContractId", "ContractTitle", "ContractComment", "ContractFData1", "ContractFData2",
-									"AddressConnect",	"AddressPasport", "FIO", "Pasport", "INN", "BGCRM_id"},
-									namespace = "http://bgb-1c.vtvs.uz/")
-@XmlRootElement(name = "Agent1C", namespace = "http://bgb-1c.vtvs.uz/")
+@XmlType(name = "", propOrder = {	
+	"ContractId", "ContractTitle", "ContractComment", "ContractFData1", "ContractFData2",
+	"AddressConnect", "AddressPasport", "FIO", "Pasport", "INN", "BGCRM_id"},
+		namespace = "http://<wsserver.test.ru>/")
+@XmlRootElement(name = "Agent1C", namespace = "http://<wsserver.test.ru>/")
 public class Agent1C {
     @XmlElement(name = "ContractId")
     protected String ContractId;
