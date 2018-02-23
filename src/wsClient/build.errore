@@ -1,0 +1,35 @@
+root@arcad:~/IdeaProjects/wsClient# ./bash.sh
+parsing WSDL...
+
+
+
+Generating code...
+
+
+Compiling code...
+
+src/Client.java:5: error: package api.uz.vtvs.bgbilling.service.impl does not exist
+import api.uz.vtvs.bgbilling.service.impl.ContractListImplService;
+                                         ^
+src/Client.java:6: error: package api.uz.vtvs.bgbilling.service.impl does not exist
+import api.uz.vtvs.bgbilling.service.impl.ContractListService;
+                                         ^
+src/Client.java:13: error: cannot find symbol
+        ContractListImplService contractList = new ContractListImplService();
+        ^
+  symbol:   class ContractListImplService
+  location: class Client
+src/Client.java:13: error: cannot find symbol
+        ContractListImplService contractList = new ContractListImplService();
+                                                   ^
+  symbol:   class ContractListImplService
+  location: class Client
+src/Client.java:15: error: cannot find symbol
+        ContractListService service = contractList.getContractListImplPort();
+        ^
+  symbol:   class ContractListService
+  location: class Client
+5 errors
+Error: Could not find or load main class com.client.Client
+Caused by: java.lang.ClassNotFoundException: com.client.Client
+
