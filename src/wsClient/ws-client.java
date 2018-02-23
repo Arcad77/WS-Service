@@ -22,26 +22,29 @@ package
 ***
 **/
   
-package com.client;
+package uz.vtvs;
 
 //import com.service.impl.PrintFigureService;
 //import com.service.impl.PrintFigureImplService;
-import api.uz.vtvs.bgbilling.service.impl.ContractListImplService;
-import api.uz.vtvs.bgbilling.service.impl.ContractListService;
+import uz.vtvs.bgb_1c.Agent1C;
+import uz.vtvs.bgb_1c.ContractList;
+import uz.vtvs.bgb_1c.ContractList_Service;
+import uz.vtvs.bgb_1c.GetAgentList;
+
 import java.util.List;
 import java.util.ArrayList;
 
 public class Client {
     public static void main(String [] args) {
 //      PrintFigureImplService figureService = new PrintFigureImplService();
-        ContractListImplService contractList = new ContractListImplService();
+        ContractList_Service contractList = new ContractList_Service();
 //      PrintFigureService service = figureService.getPrintFigureImplPort();
-        ContractListService service = contractList.getContractListImplPort();
-        List<Integer> arguments = new ArrayList<Integer>();
+        ContractList service = contractList.getContractListPort();
+        GetAgentList arguments = new GetAgentList();
         try {
-            arguments.add(Integer.parseInt(args[1]));
-            arguments.add(Integer.parseInt(args[2]));
-            System.out.println(service.showInfo(args[0], arguments));
+            arguments.setFc("1");
+            arguments.setFormatFIO("Full");
+            System.out.println(service.getAgentList(arguments));
         } catch (NumberFormatException exc) {
             exc.printStackTrace();
         }
