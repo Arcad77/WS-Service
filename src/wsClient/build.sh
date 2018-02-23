@@ -17,7 +17,7 @@ fi
 mkdir $PATH_TO_PROJECT/webservice
 # Вытяним с сервера классы, которые будут поддерживать взаимодействие
 # приложение с веб сервисом
-wsimport -d webservice -keep http://localhost:8080/print-figure-service/figure?wsdl
+wsimport -d webservice -keep 	http://192.168.9.68:8181/bgbilling/api/ru.test.bgbilling.service/ContractList?wsdl
  
 # Компилируем проект в каталог build
 javac -d $PATH_TO_PROJECT/build -cp webservice src/*.java
