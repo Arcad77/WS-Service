@@ -24,13 +24,15 @@ package uz.vtvs;
 
 //import com.service.impl.PrintFigureService;
 //import com.service.impl.PrintFigureImplService;
-import uz.vtvs.bgb_1c.Agent1C;
+//import uz.vtvs.bgb_1c.Agent1C;
 import uz.vtvs.bgb_1c.ContractList;
 import uz.vtvs.bgb_1c.ContractList_Service;
 import uz.vtvs.bgb_1c.GetAgentList;
+//import uz.vtvs.bgb_1c.GetAgentListResponse;
+//import javax.xml.bind.annotation.XmlAccessType;
 
-import java.util.List;
-import java.util.ArrayList;
+//import java.util.List;
+//import java.util.ArrayList;
 
 public class Client {
     public static void main(String [] args) {
@@ -42,7 +44,15 @@ public class Client {
         try {
             arguments.setFc("1");
             arguments.setFormatFIO("Full");
-            System.out.println(service.getAgentList(arguments));
+            arguments.setContractID("");
+            arguments.setContractOpen("");
+            arguments.setWsfTitle("");
+            System.out.println("Запрашиваем: FC - "+arguments.getFc() +
+                                    "\nFormatFIO - "+arguments.getFormatFIO()+
+                                    "\nContractID - "+arguments.getContractID()+
+                                    "\nContractOpen - "+arguments.getContractOpen()+
+                                    "\nTitle - "+arguments.getWsfTitle());
+            System.out.println("Получаем это: "+service.getAgentList(arguments));
         } catch (NumberFormatException exc) {
             exc.printStackTrace();
         }
