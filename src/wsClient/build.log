@@ -1,0 +1,31 @@
+root@server1:~/Install/BGBilling/wsClient# ./bash.sh
+parsing WSDL...
+
+
+
+Generating code...
+
+
+Compiling code...
+
+root@server1:~/Install/BGBilling/wsClient# java -cp webservice:build uz.vtvs.Client
+Запрашиваем: uz.vtvs.bgb_1c.GetAgentList@515f550a
+Получаем это: [ns2:GetAgentListResponse: null]
+root@server1:~/Install/BGBilling/wsClient# ./bash.sh
+parsing WSDL...
+
+
+
+Generating code...
+
+
+Compiling code...
+
+root@server1:~/Install/BGBilling/wsClient# java -cp webservice:build uz.vtvs.Client
+Запрашиваем: FC - 1
+FormatFIO - Full
+ContractID - 
+ContractOpen - 
+Title - 
+Получаем это: [ns2:GetAgentListResponse: null]
+root@server1:~/Install/BGBilling/wsClient#
